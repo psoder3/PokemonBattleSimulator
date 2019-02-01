@@ -87,7 +87,8 @@ public class BattleFrame extends JFrame {
         exampleMenuItem = new JMenuItem("Example Text");
         testMenu = new JMenu("Test");
         testMenuItem = new JMenuItem("Run many random battles");
-        
+        testMenuItem.setEnabled(false);
+
         
         loadMenuItem.addActionListener(new ActionListener() {
             @Override
@@ -198,6 +199,8 @@ public class BattleFrame extends JFrame {
                     gamePanel.removeAll();
                     gamePanel.add(ArenaPane,BorderLayout.CENTER);
                     
+                    testMenuItem.setEnabled(true);
+
                     
                     goButton = new JButton("GO");
                     goButton.addActionListener(new ActionListener() {
