@@ -1,0 +1,38 @@
+Charmander
+https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png
+FIRE
+100
+5
+11
+11
+Scratch
+.8
+4
+Ember
+.6
+5
+Tackle
+.9
+3
+Double kick
+.6
+5
+Bulbasaur
+https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png
+GRASS
+100
+5
+11
+11
+Vine whip
+.8
+4
+Razor leaf
+.6
+5
+Tackle
+.9
+3
+Head butt
+.6
+5
