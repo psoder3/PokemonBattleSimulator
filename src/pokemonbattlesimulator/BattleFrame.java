@@ -95,8 +95,14 @@ public class BattleFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     JFileChooser fc = new JFileChooser();
-                    if (lastDirectory != null);
-                    fc.setCurrentDirectory(lastDirectory);
+                    if (lastDirectory != null)
+                    {
+                        fc.setCurrentDirectory(lastDirectory);
+                    }
+                    else
+                    {
+                        fc.setCurrentDirectory(new File(System.getProperty("user.dir")));
+                    }
                     int result = fc.showOpenDialog(BattleFrame.this);
                     lastDirectory = fc.getCurrentDirectory();
                     
