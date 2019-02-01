@@ -152,12 +152,14 @@ public class PokemonBattleSimulator {
             p2 = pokemon1;
         }
 
-        attack(p1,p2);
+        int damage_done = attack(p1,p2);
+        p2.current_health -= damage_done;
         if (pokemon1.current_health <= 0 || pokemon2.current_health <= 0)
         {
             return;
         }
-        attack(p2,p1); 
+        damage_done = attack(p2,p1);
+        p1.current_health -= damage_done;
     }
     
     
@@ -170,7 +172,6 @@ public class PokemonBattleSimulator {
         // it is just referring to whoever is attacking
         // currently
         int damage_dealt = 0;
-        
         
         
         

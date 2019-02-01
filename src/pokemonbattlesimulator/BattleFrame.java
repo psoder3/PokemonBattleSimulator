@@ -250,6 +250,7 @@ public class BattleFrame extends JFrame {
                                 int damage = simulator.attack(p1,p2);
                                 if (damage > 0)
                                 {
+                                    p2.current_health -= damage;
                                     outputText += "It caused " + damage + " damage.\n\n";
                                 }
                                 else
@@ -274,6 +275,7 @@ public class BattleFrame extends JFrame {
                                     damage = simulator.attack(p2,p1);
                                     if (damage > 0)
                                     {
+                                        p1.current_health -= damage;
                                         outputText += "It caused " + damage + " damage.\n\n";
                                     }
                                     else
