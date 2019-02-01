@@ -101,10 +101,10 @@ public class BattleFrame extends JFrame {
                     lastDirectory = fc.getCurrentDirectory();
                     
                     if (result == JFileChooser.CANCEL_OPTION) {
-                        
+                        return;
                     }
                     if (fc.getSelectedFile() == null) {
-                        
+                        return;
                     }
                     File data_file = fc.getSelectedFile();
                     simulator.importDataFromFile(data_file);
