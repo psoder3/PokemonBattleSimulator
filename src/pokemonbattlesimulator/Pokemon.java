@@ -1,6 +1,7 @@
 package pokemonbattlesimulator;
 
 import java.util.ArrayList;
+import javax.swing.JComboBox;
 
 public class Pokemon {
     String name;
@@ -12,6 +13,7 @@ public class Pokemon {
     int speed;
     int attack;
     int id;
+    JComboBox<Move> movesDropDown;
     
     ArrayList<Move> moves;
     

@@ -114,13 +114,11 @@ public class PokemonBattleSimulator {
         // One of the pokemon has fainted
         if (pokemon1.current_health <= 0)
         {
-            //System.out.println(pokemon1.name + " has fainted. There were " + turn_counter + " turns in the battle");
             // return the value 2, indicating that pokemon 2 is the winner
             return 2;
         }
         else
         {
-            //System.out.println(pokemon2.name + " has fainted. There were " + turn_counter + " turns in the battle");
             // return the value 1, indicating that pokemon 1 is the winner
             return 1;
         }
@@ -132,8 +130,8 @@ public class PokemonBattleSimulator {
         // set move dropdowns to random
         int r1 = (int)(Math.random()*4);
         int r2 = (int)(Math.random()*4);
-        frame.p1Combo.setSelectedIndex(r1);
-        frame.p2Combo.setSelectedIndex(r2);
+        frame.simulator.pokemon1.movesDropDown.setSelectedIndex(r1);
+        frame.simulator.pokemon2.movesDropDown.setSelectedIndex(r2);
         
         // Determine who goes first
         int index_goes_first = checkWhoGoesFirst();
@@ -171,8 +169,11 @@ public class PokemonBattleSimulator {
         // p1 could be pokemon1 or pokemon2,
         // it is just referring to whoever is attacking
         // currently
+       
         int damage_dealt = 0;
         
+		// Get the attack move being done
+        Move m = (Move)p1.movesDropDown.getSelectedItem();
         
         
         

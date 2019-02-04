@@ -56,8 +56,7 @@ public class BattleFrame extends JFrame {
     File lastDirectory;
     JLabel p1HealthLabel;
     JLabel p2HealthLabel;
-    JComboBox p1Combo;
-    JComboBox p2Combo;
+    
     
     JButton goButton;
 
@@ -127,22 +126,22 @@ public class BattleFrame extends JFrame {
                     lblPanel1.add(p1HealthLabel);
                     
                     
-                    p1Combo = new JComboBox();
+                    simulator.pokemon1.movesDropDown = new JComboBox<Move>();
                     for (int i = 0; i < 4; i++)
                     {
-                        p1Combo.addItem(simulator.pokemon1.moves.get(i));
+                        simulator.pokemon1.movesDropDown.addItem(simulator.pokemon1.moves.get(i));
                     }
                     
-                    p2Combo = new JComboBox();
+                    simulator.pokemon2.movesDropDown = new JComboBox<Move>();
                     for (int i = 0; i < 4; i++)
                     {
-                        p2Combo.addItem(simulator.pokemon2.moves.get(i));
+                        simulator.pokemon2.movesDropDown.addItem(simulator.pokemon2.moves.get(i));
                     }
                     
                     p1BarPanel.add(new JLabel(""));
                     p1BarPanel.add(new JLabel(""));
                     p1BarPanel.add(new JLabel(""));
-                    p1BarPanel.add(p1Combo);
+                    p1BarPanel.add(simulator.pokemon1.movesDropDown);
                     
                     p1BarPanel.add(lblPanel1);
                     p1BarPanel.add(p1Bar);
@@ -166,7 +165,7 @@ public class BattleFrame extends JFrame {
                                         
                     p2BarPanel.add(lblPanel2);
                     p2BarPanel.add(p2Bar);
-                    p2BarPanel.add(p2Combo);
+                    p2BarPanel.add(simulator.pokemon2.movesDropDown);
                     
                     
                     p1Bar.setValue(100);
@@ -235,8 +234,8 @@ public class BattleFrame extends JFrame {
                                     // p1 goes first
                                     p1 = simulator.pokemon1;
                                     p2 = simulator.pokemon2;
-                                    m1 = (Move)p1Combo.getSelectedItem();
-                                    m2 = (Move)p2Combo.getSelectedItem();
+                                    m1 = (Move)simulator.pokemon1.movesDropDown.getSelectedItem();
+                                    m2 = (Move)simulator.pokemon2.movesDropDown.getSelectedItem();
                                     pBar1 = p1Bar;
                                     pBar2 = p2Bar;
                                     l1 = p1HealthLabel;
@@ -247,8 +246,8 @@ public class BattleFrame extends JFrame {
                                     // p2 goes first
                                     p1 = simulator.pokemon2;
                                     p2 = simulator.pokemon1;
-                                    m1 = (Move)p2Combo.getSelectedItem();
-                                    m2 = (Move)p1Combo.getSelectedItem();
+                                    m1 = (Move)simulator.pokemon2.movesDropDown.getSelectedItem();
+                                    m2 = (Move)simulator.pokemon1.movesDropDown.getSelectedItem();
                                     pBar1 = p2Bar;
                                     pBar2 = p1Bar;
                                     l1 = p2HealthLabel;
