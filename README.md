@@ -3,5 +3,5 @@ This is similar to my "Program your own Chess" project. It is a Pokemon Battling
 
 The functions that must be completed by the student are in the class PokemonBattleSimulator. 
 They are:
--public int attack(Pokemon p1, Pokemon p2)
--public int checkWhoGoesFirst()
+- public int attack(Pokemon p1, Pokemon p2)
+- public int checkWhoGoesFirst()
