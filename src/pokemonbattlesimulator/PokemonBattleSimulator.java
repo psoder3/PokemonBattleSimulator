@@ -162,35 +162,58 @@ public class PokemonBattleSimulator {
     
     
     
-    // Students must code this function
+    // Students must code the following function to:
+	// return the amount of damage p1 does to p2
     public int attack(Pokemon p1, Pokemon p2)
     {
-        // return the amount of damage p1 does to p2
+        
         // p1 could be pokemon1 or pokemon2,
         // it is just referring to whoever is attacking
         // currently
        
+	/*
+	NOTE:
+		When attacking, determine whether the move hits or misses using the Pokemon (p1's) accuracy value (between 0 and 1).
+		If the move misses, return 0.
+		If the move hits determine how much damage is done using the following:
+		start with the base damage amount of the move
+		add the Pokemon's level
+		add the Pokemon's attack value
+		double the amount if the Pokemon is strong against its opponent
+		pick a random number between 0 and 1/3 of the base damage amount of the move
+		randomly subtract or add that number to damage amount
+        */    
+	    
         int damage_dealt = 0;
         
 		// Get the attack move being done
         Move m = (Move)p1.movesDropDown.getSelectedItem();
         
-        
-        
+	    
+	    
+	    
         return damage_dealt;
     }
     
     
     
-    // Students must code this function
+    // Students must code the following function to:
+	// return 1 if Pokemon 1 attacks first
+        // return 2 if Pokemon 2 attacks first
     public int checkWhoGoesFirst()
     {
-        // return 1 if Pokemon 1 attacks first
-        // return 2 if Pokemon 2 attacks first
+	/*
+	NOTE:
+		To determine who attacks first calculate the following and choose the highest:
+		start with the Pokemon's level.
+		add the Pokemon's speed
+		add 5 if the Pokemon is strong against its opponent
+		If the above results in a tie, your program should choose one to go first randomly
+        */
         
-        
-        
-        
+	    
+	    
+	    
         return 1;
     }
     
